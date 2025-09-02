@@ -4,6 +4,7 @@ interface IRequest {
     name: string;
     description: string;
 }
+
 class CreateSpecificationService {
 
     constructor(private specificationsRepository: ISpecificationsRepository) {
@@ -21,6 +22,5 @@ class CreateSpecificationService {
     }
 
 }
-
 
 export { CreateSpecificationService }

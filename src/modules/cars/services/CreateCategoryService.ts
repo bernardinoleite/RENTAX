@@ -1,5 +1,3 @@
-// o service nao deve conhecer o response ou nao deve saber o framework que estas a usar
-
 import type { ICategoriesRepository } from "../repositories/ICategoriesRepository.js";
 
 interface IRequest {

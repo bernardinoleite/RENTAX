@@ -1,15 +1,13 @@
 import { Category } from "../model/Category.js"
 import type { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository.js";
 
-
-
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[];
 
     constructor() {
         this.categories = [];
-
     }
+
     create({ name, description }: ICreateCategoryDTO): void {
         const category = new Category();
 
@@ -19,9 +17,6 @@ class CategoriesRepository implements ICategoriesRepository {
 
         this.categories.push(category);
     }
-
-
-
 
     list(): Category[] {
         return this.categories;

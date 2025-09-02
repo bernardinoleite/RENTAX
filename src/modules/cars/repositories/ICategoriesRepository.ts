@@ -1,4 +1,5 @@
 import type { Category } from "../model/Category.js";
+
 interface ICreateCategoryDTO {
     name: string;
     description: string;
