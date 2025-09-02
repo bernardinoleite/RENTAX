@@ -1,6 +1,6 @@
 // o service nao deve conhecer o response ou nao deve saber o framework que estas a usar
 
-import type { CategoriesRepository } from "../repositories/CategoriesRepository.js";
+import type { ICategoriesRepository } from "../repositories/ICategoriesRepository.js";
 
 interface IRequest {
     name: string;
@@ -9,9 +9,7 @@ interface IRequest {
 
 class CreateCategoryService {
 
-    constructor(private categoriesRepository: CategoriesRepository) {
-
-    }
+    constructor(private categoriesRepository: ICategoriesRepository) { }
     execute({ name, description }: IRequest): void {
 
         const categoriesAlreadyExists = this.categoriesRepository.findByName(name);
@@ -19,12 +17,9 @@ class CreateCategoryService {
         if (categoriesAlreadyExists) {
             throw new Error("Category already exists");
         }
-
         this.categoriesRepository.create({ description, name });
     }
-
 }
-
 
 export {
     CreateCategoryService
