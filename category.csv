@@ -1,0 +1,101 @@
+SUV,Utilitario esportivo
+Sedan,Automovel de tres volumes
+Hatch,Carro curto
+Crossover,Mistura de SUV e hatch
+Coupé,Carro de duas portas
+Conversível,Carro com teto retrátil
+Pickup,Caminhonete
+Minivan,Van compacta
+Van,Veículo de transporte
+Roadster,Esportivo de dois lugares
+Station Wagon,Carro com porta-malas estendido
+Compacto,Carro pequeno
+Subcompacto,Menor que compacto
+Luxo,Carro sofisticado
+Esportivo,Carro de alta performance
+Off-road,Veículo para trilhas
+Microcar,Carro muito pequeno
+Limousine,Carro alongado
+Muscle Car,Esportivo americano
+Supercarro,Esportivo extremo
+Hypercarro,Esportivo ultra-exclusivo
+Retro,Carro de estilo antigo
+Elétrico,Movido a eletricidade
+Híbrido,Combinação de combustíveis
+Diesel,Motor a diesel
+Gasolina,Motor a gasolina
+Flex,Motor flexível
+Conversão,Carro adaptado
+Blindado,Carro protegido
+Taxi,Veículo de transporte público
+Policial,Viatura
+Ambulância,Veículo de emergência
+Motorizado,Veículo com motor
+Motocicleta,Veículo de duas rodas
+Scooter,Motoneta
+Quadriciclo,Veículo de quatro rodas pequeno
+Triciclo,Veículo de três rodas
+Buggy,Veículo para areia
+Kart,Veículo de corrida pequeno
+Camper,Veículo para camping
+Trailer,Reboque habitável
+Motorhome,Casa sobre rodas
+Reboque,Veículo puxado
+Chassi,Estrutura básica
+Conversão,Carro adaptado
+Executivo,Carro para negócios
+Familiar,Carro para família
+Compacto Premium,Pequeno e sofisticado
+Utilitário,Veículo funcional
+Carga,Veículo para transporte de carga
+Passageiro,Veículo para pessoas
+Conversível esportivo,Esportivo com teto retrátil
+SUV compacto,SUV pequeno
+SUV médio,SUV médio porte
+SUV grande,SUV grande porte
+Sedan compacto,Sedan pequeno
+Sedan médio,Sedan médio porte
+Sedan grande,Sedan grande porte
+Hatch compacto,Hatch pequeno
+Hatch médio,Hatch médio porte
+Hatch grande,Hatch grande porte
+Pickup compacta,Caminhonete pequena
+Pickup média,Caminhonete média
+Pickup grande,Caminhonete grande
+Minivan compacta,Van pequena
+Minivan média,Van média
+Minivan grande,Van grande
+Van compacta,Van pequena
+Van média,Van média
+Van grande,Van grande
+Roadster esportivo,Roadster de alta performance
+Station Wagon compacta,SW pequena
+Station Wagon média,SW média
+Station Wagon grande,SW grande
+Microcar elétrico,Microcarro movido a eletricidade
+Limousine executiva,Limousine para negócios
+Muscle Car clássico,Esportivo americano antigo
+Supercarro híbrido,Supercarro com motor híbrido
+Hypercarro elétrico,Hypercarro movido a eletricidade
+Retro compacto,Carro antigo pequeno
+Elétrico compacto,Carro elétrico pequeno
+Híbrido compacto,Carro híbrido pequeno
+Diesel compacto,Carro diesel pequeno
+Gasolina compacto,Carro gasolina pequeno
+Flex compacto,Carro flex pequeno
+Blindado executivo,Carro blindado para negócios
+Taxi elétrico,Taxi movido a eletricidade
+Policial SUV,Viatura SUV
+Ambulância van,Ambulância tipo van
+Motorizado compacto,Veículo motorizado pequeno
+Motocicleta esportiva,Moto de alta performance
+Scooter elétrica,Motoneta elétrica
+Quadriciclo utilitário,Quadriciclo funcional
+Triciclo motorizado,Triciclo com motor
+Buggy esportivo,Buggy de alta performance
+Kart elétrico,Kart movido a eletricidade
+Camper van,Van para camping
+Trailer compacto,Trailer pequeno
+Motorhome compacto,Motorhome pequeno
+Reboque carga,Reboque para carga
+Chassi cabine,Estrutura com cabine

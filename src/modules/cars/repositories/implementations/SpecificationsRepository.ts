@@ -1,5 +1,5 @@
-import { Specification } from "../model/Specification.js";
-import type { ICreateSpecificationDTO, ISpecificationsRepository } from "./ISpecificationsRepository.js";
+import { Specification } from "../../model/Specification.js";
+import type { ICreateSpecificationDTO, ISpecificationsRepository } from "../ISpecificationsRepository.js";
 
 class SpecificationsRepository implements ISpecificationsRepository {
 

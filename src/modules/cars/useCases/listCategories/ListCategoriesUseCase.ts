@@ -1,5 +1,5 @@
 import type { Category } from "../../model/Category.js";
-import type { CategoriesRepository } from "../../repositories/CategoriesRepository.js";
+import type { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository.js";
 import type { ICategoriesRepository } from "../../repositories/ICategoriesRepository.js";
 
 

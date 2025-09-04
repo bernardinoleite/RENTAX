@@ -1,5 +1,5 @@
-import { Category } from "../model/Category.js"
-import type { ICategoriesRepository, ICreateCategoryDTO } from "./ICategoriesRepository.js";
+import { Category } from "../../model/Category.js"
+import type { ICategoriesRepository, ICreateCategoryDTO } from "../ICategoriesRepository.js";
 
 class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[];
