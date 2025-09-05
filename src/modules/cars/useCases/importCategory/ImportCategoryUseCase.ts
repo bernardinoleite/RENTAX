@@ -20,8 +20,10 @@ class ImportCategoryUseCase {
                 throw new Error(`Error while reading file: ${err.message}`);
             });
             for await (const line of rl) {
+                if (!line.trim()) continue;
                 yield line.split(",");
             }
+            fs.promises.unlink(file.path);
         })()
 
     }
@@ -30,7 +32,7 @@ class ImportCategoryUseCase {
         const categories = await this.loadCategories(file)
         for await (const line of categories) {
             const [name, description] = line;
-
+            if (!name) continue;
             const categoryAlreadExists = this.categoriesRepository.findByName(name);
             if (!categoryAlreadExists) {
                 this.categoriesRepository.create({ name, description });
@@ -39,7 +41,6 @@ class ImportCategoryUseCase {
 
     }
 }
-
 
 export {
     ImportCategoryUseCase
