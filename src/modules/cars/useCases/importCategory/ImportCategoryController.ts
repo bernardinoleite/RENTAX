@@ -8,9 +8,9 @@ class ImportCategoryController {
 
     }
 
-    handle(request: Request, response: Response): Response {
+    async handle(request: Request, response: Response): Promise<Response> {
         const { file } = request;
-        this.importCategoryUseCase.execute(file);
+        await this.importCategoryUseCase.execute(file);
 
         return response.send()
     }

@@ -33,12 +33,11 @@ class ImportCategoryUseCase {
         for await (const line of categories) {
             const [name, description] = line;
             if (!name) continue;
-            const categoryAlreadExists = this.categoriesRepository.findByName(name);
+            const categoryAlreadExists = await this.categoriesRepository.findByName(name);
             if (!categoryAlreadExists) {
-                this.categoriesRepository.create({ name, description });
+                await this.categoriesRepository.create({ name, description });
             }
         }
-
     }
 }
 
