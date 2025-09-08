@@ -16,6 +16,7 @@ class CreateCategoryUseCase {
         if (categoriesAlreadyExists) {
             throw new Error("Category already exists");
         }
+
         await this.categoriesRepository.create({ description, name });
     }
 }

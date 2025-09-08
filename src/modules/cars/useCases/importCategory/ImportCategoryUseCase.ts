@@ -19,6 +19,11 @@ class ImportCategoryUseCase {
             stream.on("error", (err) => {
                 throw new Error(`Error while reading file: ${err.message}`);
             });
+
+            rl.on("error", (err) => {
+                throw new Error(`Error in readline: ${err.message}`);
+            });
+
             for await (const line of rl) {
                 if (!line.trim()) continue;
                 yield line.split(",");

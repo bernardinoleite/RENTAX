@@ -1,8 +1,8 @@
 process.loadEnvFile(".env")
 
-
 import { DataSource } from "typeorm";
 import { Category } from "../modules/cars/entities/Category.js";
+
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: process.env.HOST_DB,
@@ -14,6 +14,6 @@ export const AppDataSource = new DataSource({
     logging: false,
     entities: [Category],
     subscribers: [],
-    migrations: ["src/database/migrations/*.ts"],
+    migrations: ["src/database/migrations/*.ts"]
 });
 

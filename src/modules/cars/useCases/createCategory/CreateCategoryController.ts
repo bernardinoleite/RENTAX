@@ -1,10 +1,8 @@
 import type { Request, Response } from "express";
 import type { CreateCategoryUseCase } from "./CreateCategoryUseCase.js";
 
-
 class CreateCategoryController {
     constructor(private createCategoryUseCase: CreateCategoryUseCase) {
-
     }
 
     async handle(request: Request, response: Response): Promise<Response> {
@@ -13,10 +11,8 @@ class CreateCategoryController {
         await this.createCategoryUseCase.execute({ name, description });
 
         return response.status(201).send();
-
     }
 }
-
 
 export {
     CreateCategoryController

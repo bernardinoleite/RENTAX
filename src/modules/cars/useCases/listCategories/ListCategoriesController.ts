@@ -1,7 +1,6 @@
 import type { Request, Response } from "express"
 import type { ListCategoriesUseCase } from "./ListCategoriesUseCase.js"
 
-
 class ListCategoriesController {
 
     constructor(private listCategoriesUseCase: ListCategoriesUseCase) {

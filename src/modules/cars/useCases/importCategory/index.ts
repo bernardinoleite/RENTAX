@@ -3,7 +3,6 @@ import { CategoriesRepository } from "../../repositories/implementations/Categor
 import { ImportCategoryController } from "./ImportCategoryController.js";
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase.js";
 
-
 export default (): ImportCategoryController => {
     const categoriesRepository = new CategoriesRepository()
 

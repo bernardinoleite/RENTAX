@@ -1,8 +1,6 @@
 import type { Request, Response } from "express";
 import type { CreateSpecificationUseCase } from "./CreateSpecificationUseCase.js";
 
-
-
 class CreateSpecificationController {
     constructor(private createSpecificationUseCase: CreateSpecificationUseCase) { }
 
