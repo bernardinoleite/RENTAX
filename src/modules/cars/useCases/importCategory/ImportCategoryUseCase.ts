@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { createInterface } from "node:readline";
 import type { ICategoriesRepository } from "../../repositories/ICategoriesRepository.js";
+import { AppError } from "../../../../errors/AppError.js";
 
 class ImportCategoryUseCase {
 
@@ -17,11 +18,11 @@ class ImportCategoryUseCase {
                 crlfDelay: Infinity
             })
             stream.on("error", (err) => {
-                throw new Error(`Error while reading file: ${err.message}`);
+                throw new AppError(`Error while reading file: ${err.message}`);
             });
 
             rl.on("error", (err) => {
-                throw new Error(`Error in readline: ${err.message}`);
+                throw new AppError(`Error in readline: ${err.message}`);
             });
 
             for await (const line of rl) {
