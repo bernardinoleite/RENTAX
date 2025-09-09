@@ -12,7 +12,7 @@
         "/categories": {
             "post": {
                 "tags": [
-                    "Category"
+                    "Categories"
                 ],
                 "summary": "Create  a category",
                 "description": "Create a new category",
@@ -48,7 +48,7 @@
             },
             "get": {
                 "tags": [
-                    "Category"
+                    "Categories"
                 ],
                 "summary": "List Categories",
                 "description": "List all categories",
@@ -75,6 +75,78 @@
                         }
                     }
                 }
+            }
+        },
+        "/categories/import": {
+            "post": {
+                "tags": [
+                    "Categories"
+                ],
+                "summary": "Upload a new Category",
+                "description": "Upload a new Category",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "file": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/specifications": {
+            "post": {
+                "tags": [
+                    "Specifications"
+                ],
+                "summary": "Create a Specification",
+                "description": "Create a new specification",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/definitions/specification"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "Specification already exists"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "specification": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "example": {
+                "name": "Specification name sample",
+                "description": "Description name sample"
             }
         }
     }
