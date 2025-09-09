@@ -1,5 +1,4 @@
 import { Repository } from "typeorm";
-import { hash } from "bcrypt";
 import { IUserRepository } from "../IUsersRepository.js";
 import { User } from "../../entities/User.js";
 import { AppDataSource } from "../../../../database/data-source.js";
@@ -12,6 +11,7 @@ class UserRepository implements IUserRepository {
     constructor() {
         this.repository = AppDataSource.getRepository(User);
     }
+
     async create({ name, email, password, driver_license }: ICreateUserDTO): Promise<void> {
 
         const user = this.repository.create({ name, email, password, driver_license });
@@ -19,6 +19,14 @@ class UserRepository implements IUserRepository {
         await this.repository.save(user);
     }
 
+    async findByEmail(email: string): Promise<User> {
+        const user = await this.repository.findOne({
+            where: {
+                email
+            }
+        })
+        return user;
+    }
 
 
 }
