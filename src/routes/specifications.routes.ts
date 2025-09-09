@@ -1,13 +1,13 @@
 import { Router } from "express";
 
-import { createSpecificationController } from "../modules/cars/useCases/createSpecification/index.js";
+import createSpecificationController from "../modules/cars/useCases/createSpecification/index.js";
 
-const specificationsRouter = Router();
+const specificationsRoutes = Router();
 
-specificationsRouter.post("/", async (request, response) => {
-    await createSpecificationController.handle(request, response);
+specificationsRoutes.post("/", async (request, response) => {
+    await createSpecificationController().handle(request, response);
 })
 
 export {
-    specificationsRouter
+    specificationsRoutes
 }

@@ -1,12 +1,14 @@
 import { Router } from "express";
-import { categoriesRouter } from "./categories.routes.js";
-import { specificationsRouter } from "./specifications.routes.js";
+import { categoriesRoutes } from "./categories.routes.js";
+import { specificationsRoutes } from "./specifications.routes.js";
+import { usersRoutes } from "./users.routes.js";
 
 const router = Router();
 
 
-router.use("/categories", categoriesRouter);
-router.use("/specifications", specificationsRouter);
+router.use("/categories", categoriesRoutes);
+router.use("/specifications", specificationsRoutes);
+router.use("/users", usersRoutes)
 
 export {
     router

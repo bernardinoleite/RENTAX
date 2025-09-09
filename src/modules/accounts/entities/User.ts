@@ -10,9 +10,6 @@ class User {
     name: string;
 
     @Column("varchar")
-    username: string;
-
-    @Column("varchar")
     email: string;
 
     @Column("varchar")
@@ -21,8 +18,11 @@ class User {
     @Column("varchar")
     driver_license: string;
 
-    @Column("boolean")
-    isAdmin: boolean;
+    @Column({
+        type: "boolean",
+        default: false
+    })
+    isAdmin?: boolean;
 
     @CreateDateColumn({ type: "timestamp" })
     created_at: Date;
