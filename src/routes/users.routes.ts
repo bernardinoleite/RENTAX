@@ -6,6 +6,9 @@ usersRoutes.post("/", async (request, response) => {
     await createUserController().handle(request, response);
 })
 
+usersRoutes.post("/", async (request, response) => {
+    await createUserController().handle(request, response);
+})
 export {
     usersRoutes
 }
