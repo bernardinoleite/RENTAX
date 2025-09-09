@@ -2,6 +2,7 @@ process.loadEnvFile(".env")
 
 import { DataSource } from "typeorm";
 import { Category } from "../modules/cars/entities/Category.js";
+import { Specification } from "../modules/cars/entities/Specification.js";
 
 export const AppDataSource = new DataSource({
     type: "postgres",
@@ -12,7 +13,7 @@ export const AppDataSource = new DataSource({
     database: process.env.DATABASE,
     synchronize: true,
     logging: false,
-    entities: [Category],
+    entities: [Category, Specification],
     subscribers: [],
     migrations: ["src/database/migrations/*.ts"]
 });
