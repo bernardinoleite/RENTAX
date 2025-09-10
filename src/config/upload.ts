@@ -5,8 +5,6 @@ import { fileURLToPath } from "node:url";
 
 export default {
     upload(folder: string) {
-        console.log(folder);
-
         return {
             storage: multer.diskStorage({
                 destination: resolve(dirname(fileURLToPath(import.meta.url)), "..", "..", folder),
