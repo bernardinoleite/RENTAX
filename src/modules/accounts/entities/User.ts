@@ -24,6 +24,12 @@ class User {
     })
     isAdmin?: boolean;
 
+    @Column({
+        type: "varchar",
+        nullable: true
+    })
+    avatar: string;
+
     @CreateDateColumn({ type: "timestamp" })
     created_at: Date;
 
