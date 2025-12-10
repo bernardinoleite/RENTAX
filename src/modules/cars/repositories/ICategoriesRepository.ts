@@ -1,4 +1,4 @@
-import type { Category } from "../entities/Category.js";
+import type { Category } from "../infra/typeorm/entities/Category.js";
 
 interface ICreateCategoryDTO {
     name: string;

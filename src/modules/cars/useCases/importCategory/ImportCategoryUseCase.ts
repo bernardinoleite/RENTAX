@@ -1,13 +1,11 @@
 import fs from "node:fs";
 import { createInterface } from "node:readline";
 import type { ICategoriesRepository } from "../../repositories/ICategoriesRepository.js";
-import { AppError } from "../../../../errors/AppError.js";
+import { AppError } from "../../../../shared/errors/AppError.js";
 
 class ImportCategoryUseCase {
 
-    constructor(private categoriesRepository: ICategoriesRepository) {
-
-    }
+    constructor(private categoriesRepository: ICategoriesRepository) { }
 
     async loadCategories(file: Express.Multer.File) {
 

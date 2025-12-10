@@ -1,5 +1,6 @@
 import { IUserRepository } from "../../repositories/IUsersRepository.js";
 import { deleteFile } from "../../../../utils/file.js";
+
 interface IRequest {
     user_id: string;
     avatar_file: string;
@@ -7,9 +8,7 @@ interface IRequest {
 
 class UpdateUserAvatarUseCase {
 
-    constructor(private userRepository: IUserRepository) {
-
-    }
+    constructor(private userRepository: IUserRepository) { }
 
     async execute({ user_id, avatar_file }: IRequest): Promise<void> {
 
@@ -19,10 +18,8 @@ class UpdateUserAvatarUseCase {
         }
         user.avatar = avatar_file;
         await this.userRepository.create(user);
-
     }
 }
-
 
 export {
     UpdateUserAvatarUseCase

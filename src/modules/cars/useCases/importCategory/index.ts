@@ -1,5 +1,5 @@
 
-import { CategoriesRepository } from "../../repositories/implementations/CategoriesRepository.js";
+import { CategoriesRepository } from "../../infra/typeorm/repositories/CategoriesRepository.js";
 import { ImportCategoryController } from "./ImportCategoryController.js";
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase.js";
 

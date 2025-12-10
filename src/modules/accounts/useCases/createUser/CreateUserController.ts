@@ -1,13 +1,9 @@
 import { CreateUserUseCase } from "./CreateUserUseCase.js";
 import { Request, Response } from "express";
 
-
 class CreateUserController {
 
-
-    constructor(private createUserUseCase: CreateUserUseCase) {
-
-    }
+    constructor(private createUserUseCase: CreateUserUseCase) { }
 
     async handle(request: Request, response: Response): Promise<Response> {
 
@@ -23,7 +19,6 @@ class CreateUserController {
         return response.status(201).send();
     }
 }
-
 
 export {
     CreateUserController

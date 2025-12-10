@@ -1,7 +1,7 @@
 import { compare } from "bcrypt";
 import { IUserRepository } from "../../repositories/IUsersRepository.js";
 import jwt from "jsonwebtoken";
-import { AppError } from "../../../../errors/AppError.js";
+import { AppError } from "../../../../shared/errors/AppError.js";
 
 interface IRequest {
     email: string;
@@ -17,7 +17,6 @@ interface IResponse {
 }
 
 class AuthenticateUserUseCase {
-
 
     constructor(private usersRepository: IUserRepository) { }
 

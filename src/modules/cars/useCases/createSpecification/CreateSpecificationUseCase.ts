@@ -1,4 +1,4 @@
-import { AppError } from "../../../../errors/AppError.js";
+import { AppError } from "../../../../shared/errors/AppError.js";
 import type { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository.js";
 
 interface IRequest {

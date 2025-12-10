@@ -3,10 +3,7 @@ import { Request, Response } from "express";
 
 class AuthenticateUserController {
 
-    constructor(private authenticateUserUseCase: AuthenticateUserUseCase) {
-
-    }
-
+    constructor(private authenticateUserUseCase: AuthenticateUserUseCase) { }
     async handle(request: Request, response: Response): Promise<Response> {
         const { email, password } = request.body;
 
@@ -15,7 +12,6 @@ class AuthenticateUserController {
         return response.status(200).json(token);
     }
 }
-
 
 export {
     AuthenticateUserController

@@ -1,4 +1,4 @@
-import { UserRepository } from "../../repositories/implementations/UserRepository.js";
+import { UserRepository } from "../../infra/typeorm/repositories/UserRepository.js";
 import { CreateUserUseCase } from "./CreateUserUseCase.js";
 import { CreateUserController } from "./CreateUserController.js";
 

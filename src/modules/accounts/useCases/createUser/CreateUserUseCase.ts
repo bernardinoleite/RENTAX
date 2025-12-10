@@ -1,14 +1,11 @@
 import { hash } from "bcrypt";
 import { ICreateUserDTO } from "../../dtos/ICreateUsersDTO.js";
 import { IUserRepository } from "../../repositories/IUsersRepository.js";
-import { AppError } from "../../../../errors/AppError.js";
-
+import { AppError } from "../../../../shared/errors/AppError.js";
 
 class CreateUserUseCase {
 
-    constructor(private userRepository: IUserRepository) {
-
-    }
+    constructor(private userRepository: IUserRepository) { }
 
     async execute({ name, email, password, driver_license }: ICreateUserDTO): Promise<void> {
 
@@ -25,9 +22,7 @@ class CreateUserUseCase {
             password: passwordHash,
             driver_license
         });
-
     }
-
 }
 
 export {

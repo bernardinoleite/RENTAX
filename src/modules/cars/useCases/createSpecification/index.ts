@@ -1,6 +1,7 @@
-import { SpecificationsRepository } from "../../repositories/implementations/SpecificationsRepository.js";
+import { SpecificationsRepository } from "../../infra/typeorm/repositories/SpecificationsRepository.js";
 import { CreateSpecificationController } from "./CreateSpecificationController.js";
 import { CreateSpecificationUseCase } from "./CreateSpecificationUseCase.js";
+
 export default (): CreateSpecificationController => {
     const specificationsRepository = new SpecificationsRepository();
     const createSpecificationUseCase = new CreateSpecificationUseCase(specificationsRepository);
